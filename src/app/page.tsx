@@ -108,19 +108,9 @@ function Card({ p, onNext, onPrev }: { p: Profile; onNext: () => void; onPrev: (
         <h2 className="font-bold text-lg">{p.name}</h2>
         {p.bio && <p className="text-sm text-gray-700 mt-1">{p.bio}</p>}
         <p className="text-xs text-gray-400 mt-1">※画像をフリック（左右）で切替／ボタンでも操作できます</p>
-        <div className="mt-3 flex gap-2">
+        <div className="mt-3 flex flex-col gap-2">
           <a
-            className="flex-1 rounded-lg bg-black text-white text-center py-2"
-            href="https://instagram.com/あなたのID"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="InstagramでDMする"
-            title="InstagramでDMする"
-          >
-            DMする
-          </a>
-          <a
-            className="flex-1 rounded-lg bg-green-500 text-white text-center py-2"
+            className="w-full rounded-lg bg-green-500 text-white text-center py-2"
             href="https://line.me/ti/p/xpNddE62AL"
             target="_blank"
             rel="noreferrer"
@@ -129,6 +119,9 @@ function Card({ p, onNext, onPrev }: { p: Profile; onNext: () => void; onPrev: (
           >
             LINEで追加
           </a>
+          <div className="w-full rounded-lg bg-gray-200 text-center py-2 text-black">
+            DMしてみたら？
+          </div>
         </div>
       </div>
     </div>
